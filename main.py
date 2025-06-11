@@ -42,23 +42,22 @@ async def main_counter():
     await asyncio.gather(count(), count(), count())
 
 
-async def main():
+async def main_random_color():
     res = await asyncio.gather(*(make_random(i, 10 - i - 1) for i in range(3)))
     return res
 
 
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     print(f"Python version: {get_python_version()}")
 
     s = time.perf_counter()
 
     random.seed(444)
-    r1, r2, r3 = asyncio.run(main())
+    r1, r2, r3 = asyncio.run(main_random_color())
     print()
     print(f"r1: {r1}, r2: {r2}, r3: {r3}")
 
-    # asyncio.run(main()) # for use with count()
+    # asyncio.run(main_random_color()) # for use with count()
 
     elapsed = time.perf_counter() - s
     print(f"{__file__} executed in {elapsed:0.2f} seconds.")
