@@ -3,6 +3,9 @@ import random
 import sys
 import time
 from importlib.metadata import version
+#
+from rich.console import Console
+from rich.text import Text
 
 # ANSI colors
 c = (
@@ -49,6 +52,7 @@ async def main_random_color():
 
 if __name__ == '__main__':
     print(f"Python version: {get_python_version()}")
+    print(f'rich version: {get_package_version("rich")}')
 
     s = time.perf_counter()
 
