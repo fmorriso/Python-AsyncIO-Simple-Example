@@ -12,9 +12,10 @@ A very simple example of using Python's asynchronous IO features.
 
 ## Change History
 
-| Date       | Description      |
-|:-----------|:-----------------|
-| 2025-06-11 | Initial creation |
+| Date       | Description                  |
+|:-----------|:-----------------------------|
+| 2025-06-11 | Initial creation             |
+| 2025-06-12 | rename methods and variables |
 
 ## References
 
